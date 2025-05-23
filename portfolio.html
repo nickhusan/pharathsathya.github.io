@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharath Sathya - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling by default for browsers that support it */
+        }
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            padding-top: 60px; /* Add padding to the top of the body to prevent content from being hidden behind the fixed navbar */
+        }
+
+        @keyframes subtleGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero-section {
+            background: linear-gradient(270deg, #0f2027, #203a43, #2c5364, #1f4287);
+            background-size: 300% 300%;
+            animation: subtleGradient 25s ease infinite;
+            color: white;
+            font-family: 'Exo 2', sans-serif;
+            /* No min-h-screen here if navbar takes space, or adjust calculation */
+            /* We want hero to be full visible height AFTER navbar */
+            height: calc(100vh - 60px); /* Adjusted for navbar height */
+            display: flex; /* Re-add flex for alignment */
+            align-items: center; /* Re-add flex for alignment */
+            justify-content: center; /* Re-add flex for alignment */
+        }
+
+        .name-title {
+            font-weight: 700;
+        }
+
+        .font-roboto-mono {
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: rgba(18, 18, 18, 0.85); /* Dark semi-transparent background */
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+            -webkit-backdrop-filter: blur(10px); /* For Safari */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .nav-link {
+            @apply px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition-colors duration-150;
+            /* Using @apply for Tailwind classes within CSS, ensure your setup supports this if not using CDN directly or a PostCSS build step.
+               For CDN, these classes would be directly in the HTML. Let's put them in HTML for simplicity with CDN. */
+        }
+
+    </style>
+</head>
+<body class="antialiased">
+
+<nav class="navbar fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center">
+                <a href="#" class="text-xl font-bold text-sky-400 hover:text-sky-300 transition-colors duration-150">Pharath Sathya</a>
+                <div class="ml-10 flex items-baseline space-x-4">
+                    <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition-colors duration-150">About</a>
+                    <a href="#projects" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition-colors duration-150">Projects</a>
+                    <a href="#skills" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition-colors duration-150">Skills</a>
+                    <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition-colors duration-150">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<section id="hero" class="hero-section p-6 sm:p-12 relative overflow-hidden">
+    <div class="text-center max-w-3xl z-10">
+        <h1 class="name-title text-5xl sm:text-6xl md:text-7xl mb-3">
+            Pharath Sathya
+        </h1>
+        <p class="font-roboto-mono text-lg sm:text-xl md:text-2xl text-sky-300 mb-8">
+            Senior Electrical Engineering Student & AI Researcher
+        </p>
+        <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-10 leading-relaxed max-w-2xl mx-auto">
+            Bridging foundational hardware with advanced natural language processing to shape the future of intelligent systems.
+        </p>
+    </div>
+</section>
+
+<section id="about" class="py-20 px-6 bg-[#1a1a1a]">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-sky-400 mb-12">About Me</h2>
+        <p class="text-center text-lg text-gray-300">
+            Hello! I'm Pharath Sathya.
+            [Your drafted "About Me" content will go here. Start telling your story!]
+            <br><br>
+            I am a senior Electrical Engineering student deeply fascinated by the intersection of hardware design and the rapidly evolving field of Artificial Intelligence, particularly Natural Language Processing. My journey into EE has equipped me with a strong understanding of circuits, computer architecture, and signal processing – principles I now leverage to explore the complexities of AI agents.
+            <br><br>
+            Currently, I'm engaged in research at an NLP lab, where I'm contributing to [mention a general, non-confidential aspect of your research, e.g., "enhancing the contextual awareness of dialogue systems" or "investigating efficient learning models for specialized NLP tasks"]. This experience is not only honing my technical skills in areas like Python and machine learning frameworks but also fueling my passion for building systems that can understand and interact with the world in more human-like ways.
+            <br><br>
+            I believe that a robust understanding of the underlying hardware is crucial for creating truly innovative and efficient AI. I'm excited to contribute to a future where intelligent systems are seamlessly integrated into our lives, driven by sound engineering and a creative approach to problem-solving.
+        </p>
+    </div>
+</section>
+
+<section id="projects" class="py-20 px-6 bg-[#121212]">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-sky-400 mb-16">Projects & Research</h2>
+        <p class="text-center text-lg text-gray-300 mb-10"> 
+            Here are some of the areas I've been exploring and contributing to:
+        </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-[#1e1e1e] p-6 rounded-lg shadow-xl hover:shadow-sky-500/30 transition-shadow duration-300">
+                <h3 class="text-xl font-semibold text-sky-400 mb-2">Research: AI Agent Dialogue Systems</h3>
+                <p class="text-gray-400 text-sm mb-3">NLP Lab - Ongoing</p>
+                <p class="text-gray-300">Contributing to the development and evaluation of more contextually aware AI dialogue agents using Python and modern NLP techniques.</p>
+            </div>
+            <div class="bg-[#1e1e1e] p-6 rounded-lg shadow-xl hover:shadow-sky-500/30 transition-shadow duration-300">
+                <h3 class="text-xl font-semibold text-sky-400 mb-2">Project: Digital System Design</h3>
+                <p class="text-gray-400 text-sm mb-3">EE Coursework</p>
+                <p class="text-gray-300">Designed and simulated a [e.g., 4-bit ALU] using VHDL, demonstrating understanding of digital logic and hardware description languages.</p>
+            </div>
+            <div class="bg-[#1e1e1e] p-6 rounded-lg shadow-xl hover:shadow-sky-500/30 transition-shadow duration-300">
+                <h3 class="text-xl font-semibold text-sky-400 mb-2">Capstone Project (EE)</h3>
+                <p class="text-gray-400 text-sm mb-3">Senior Year</p>
+                <p class="text-gray-300">[Describe your upcoming or current capstone project here when details are available.]</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="py-20 px-6 bg-[#1a1a1a]">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-sky-400 mb-12">Core Competencies</h2>
+        <p class="text-center text-lg text-gray-300">
+            [Your skills will go here, categorized. e.g., Electrical Engineering: Circuits, Comp Arch... | Software & AI: Python, NLP Libs... | Tools: LTSpice, Git...]
+        </p>
+    </div>
+</section>
+
+<section id="contact" class="py-20 px-6 bg-[#121212]">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-sky-400 mb-12">Get In Touch</h2>
+        <p class="text-center text-lg text-gray-300">
+            [Your contact information: Professional Email | LinkedIn URL | GitHub URL will go here.]
+            <br><br>
+            You can reach me at: <a href="mailto:your.email@example.com" class="text-sky-400 hover:text-sky-300">your.email@example.com</a>
+        </p>
+    </div>
+</section>
+
+
+<script>
+    // Smooth scroll for anchor links (already good but ensure it's there)
+    // The 'html { scroll-behavior: smooth; }' CSS rule handles this for most modern browsers for simple anchor links.
+    // The JS below is a more robust fallback or for more complex scenarios, but often not strictly needed for basic #hash links with the CSS rule.
+    // For now, CSS `scroll-behavior: smooth;` is the primary method.
+
+    // Optional: Add active state to nav links on scroll (more advanced, for later if desired)
+</script>
+
+</body>
+</html>
